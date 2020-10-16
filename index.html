@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gissningsspel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gissa ett slumpat nummer mellan 1 och 100.</h1>
+    </header>
+
+
+    <div id="guess-body">
+        <section class="form-input">
+            <input id="input-guess" class="input-guess" type="text" placeholder="Ange ett nummer">
+        </section>
+        <section>
+            <input type="submit" id="submit" value="Submit" class="submit-guess">
+        </section>
+
+        <div id="results">
+            <div id="results-text">
+                <p>Senaste gissningen: <span id="number-of-guess"></span></p>
+                <p>Antalet försök kvar: <span id="result">8</span></p>
+            </div>
+            <p id="msg-feedback"></p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
