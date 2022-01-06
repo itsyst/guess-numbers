@@ -4,106 +4,45 @@
 	padding: 0;
 }
 
-header h1 {
-	background-color: #ed1c24;
-	text-align: center;
-	justify-content: center;
-	color: #fff;
-	font-size: 180%;
-	width: 99%;
-	margin: 2px;
-	padding: 2px;
-}
-
-h1 {
-	text-align: center;
-}
-body {
+.container {
+	position: relative;
 	background: url(img/guess.svg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 50% 110%;
-	width: 50%;
+	background-size: 100% 110%;
 	max-width: 750px;
 	min-width: 480px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 80vh;
+	min-height: 90vh;
 }
 
-#guess-body {
-	height: 320px;
-	width: 640px;
-}
-section {
-	margin: 65px;
-}
-#input-guess {
-	border: 2px solid #000;
-	background-color: #fff;
-	border-radius: 25px;
+header h1 {
+	background-color: #ed1c24;
 	text-align: center;
-	color: #000;
-	width: 35%;
-	height: 33px;
-	padding: 2px;
-	margin-top: 24%;
-	margin-left: 25rem;
-	font-size: 13px;
-}
-
-#input-guess:hover {
-	background-color: #23ed1c;
-}
-
-#submit {
-	border: 2px solid #000;
-	background-color: #fff;
-	color: #000;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	font-size: 12px;
-
-	padding: 2px;
-	margin-left: 19rem;
-	margin-top: 5rem;
-	text-align: center;
-}
-#submit:hover {
-	background-color: #23ed1c;
-}
-
-#results-text {
-	font-size: 20px;
-	position: absolute;
-	margin-top: -28rem;
-	margin-left: -348px;
-}
-
-#results-text p span {
-	margin: 2;
-	padding: 0;
-}
-
-#results {
-	display: flex;
-	justify-content: center;
+	color: #fff;
+	font-size: 180%;
 	width: 100%;
+	padding: 4px;
+}
+
+.results-text {
+	position: relative;
+	font-size: 20px;
+	margin: 4px;
+	top: 0;
+	left: 0;
+}
+.results-text p {
+	margin-top: 6px;
 }
 
 #number-of-guess {
 	background-color: #ed1c24;
 	color: white;
-	padding: 7px;
-}
-
-#result {
-	background-color: #23ed1c;
-	color: white;
-	padding: 7px;
+	padding: 2px;
 }
 
 #guess {
@@ -112,44 +51,104 @@ section {
 	color: #fff;
 }
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 1210px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	#input-guess {
-		margin-top: 24%;
-		font-size: 13px;
-	}
-	#submit {
-		width: 50px;
-		height: 50px;
-		font-size: 12px;
-	}
+#result {
+	background-color: #23ed1c;
+	color: white;
+	padding: 2px;
 }
+
+.guess-body {
+	height: 320px;
+	width: 640px;
+}
+
+.input-guess,
+.submit-guess {
+	border: 1px solid #000;
+	background-color: #fff;
+	text-align: center;
+	color: #000;
+	padding: 2px;
+}
+
+.input-guess {
+	position: relative;
+	width: 35%;
+	height: 33px;
+	font-size: 13px;
+	margin-top: 15vh;
+	margin-left: 411px;
+	margin-right: auto;
+}
+
+.submit-guess {
+	position: relative;
+	font-size: 11px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-top: 11vh;
+	margin-left: 369px;
+	margin-right: auto;
+}
+
+#submit:hover,
+#input-guess:hover {
+	background-color: #a4faa1;
+}
+
+.msg-feedback {
+	position: absolute;
+	/* margin-left: auto;
+	margin-right: auto; 
+	text-align: center;*/
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#msg-feedback h1 {
+	text-align: center;
+	color: white;
+	padding: 4px;
+}
+
 /* ----------- responsive design ----------- */
-@media only screen and (max-width: 1209px) {
-	#input-guess {
-		margin-top: 24%;
-		margin-left: 300px;
-		font-size: 13px;
+
+@media only screen and (min-device-width: 860px) and (max-width: 1100px) {
+	.input-guess {
+		width: 25%;
+		height: 25px;
+		margin-top: 15vh;
+		margin-left: 25rem;
+		margin-right: auto;
 	}
-	#submit {
-		width: 50px;
-		height: 50px;
-		font-size: 12px;
-		margin-left: 45%;
+
+	.submit-guess {
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		margin-top: 11.4vh;
+		margin-left: 20.6rem;
+		margin-right: auto;
 	}
 }
 
-@media only screen and (min-device-width: 860px) and (max-width: 1100px) {
-	#input-guess {
-		margin-top: 24%;
-		margin-left: 200px;
-		font-size: 13px;
+@media screen and (max-width: 595px) {
+	.input-guess {
+		width: 20%;
+		height: 19px;
+		margin-top: 15vh;
+		margin-left: 19rem;
+		margin-right: auto;
 	}
-	#submit {
+
+	.submit-guess {
 		width: 39px;
 		height: 39px;
-		font-size: 12px;
-		margin-left: 33%;
-		margin-top: 0rem;
+		border-radius: 50%;
+		margin-top: 8.5vh;
+		margin-left: 16rem;
+		margin-right: auto;
 	}
 }
